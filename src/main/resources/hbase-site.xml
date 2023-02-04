@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>hbase.zookeeper.quorum</name>
+        <value>adopt.hadoop38111,adopt.hadoop38154,adopt.hadoop38187</value>
+    </property>
+    <property>
+        <name>hbase.zookeeper.property.clientPort</name>
+        <value>2181</value>
+    </property>
+    <property>
+        <name>zookeeper.znode.parent</name>
+        <value>/hbase-unsecure</value>
+    </property>
+    <!--    Enabling Hedged Reads for HBase Using the Command Line-->
+    <property>
+        <name>dfs.client.hedged.read.threadpool.size</name>
+        <value>20</value>  <!-- 20 threads -->
+    </property>
+    <property>
+        <name>dfs.client.hedged.read.threshold.millis</name>
+        <value>10</value>  <!-- 10 milliseconds -->
+    </property>
+</configuration>
